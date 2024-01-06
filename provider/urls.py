@@ -1,10 +1,8 @@
 from django.urls import path,include
 from .import views
-from provider.views import servicesmain
+from .views import index
 
 
 urlpatterns = [
-    
-    path('', views.index),
-    path('',servicesmain,name="service"),
+    path('',index,name="home"),
 ]
