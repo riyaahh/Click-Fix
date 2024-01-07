@@ -4,9 +4,10 @@ from .import views
 
 urlpatterns = [
     
-    path('', views.index),
-    path('', views.index),
-    path('', views.index),
-    path('', views.index),
-    path('', views.index),
+    path('' , views.chumma),
+#     path('', views.index),
+#     path('', views.index),
+#     path('', views.index),
+#     path('', views.index),
+#     path('', views.index),
 ]
