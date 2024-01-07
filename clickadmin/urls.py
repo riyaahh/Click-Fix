@@ -5,7 +5,6 @@ from .import views
 
 
 
-
 urlpatterns = [
 
     path('cdadmin',views.registration,name="home"),
