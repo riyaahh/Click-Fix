@@ -4,10 +4,9 @@ from .views import index,about,contact,service
 
 
 urlpatterns = [
-    path('',index,name="home"),
-    path('','provider/index.html',index,name="home"),
-
-    path('',about,name="home1"),
-    path('',contact,name="home2"),
-    path('',service,name="home3"),
+    path('',index,name="dashboard"),
+    path('index',index,name="index"),
+    path('about',about,name="about"),
+    path('contact',contact,name="contact"),
+    path('service',service,name="service"),
 ]
