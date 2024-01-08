@@ -11,3 +11,5 @@ def contact(request):
 def service(request):
     return render(request,"provider/service.html",context={})
 # Create your views here.
+def book(request):
+    return render(request,"provider/bookings.html",context={})

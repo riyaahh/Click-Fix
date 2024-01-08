@@ -8,14 +8,14 @@
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
   <!-- font awesome style -->
-  <link rel="stylesheet" type="text/css" href="static/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}" />
 
   <!-- Custom styles for this template -->
-  <link href="static/css/style.css" rel="stylesheet" />
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="static/css/responsive.css" rel="stylesheet" />
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
 
 
 
@@ -233,7 +233,7 @@
               </h5>
               <p>
                 Our comprehensive maintenance services ensure your home stays in optimal condition year-round.<br>
-                <a href="">CLICK TO BOOK</a>
+                <a href="bookings.html">CLICK TO BOOK</a>
               </p>
             </div>
           </div>
@@ -249,7 +249,7 @@
               </h5>
               <p>
                 Ensuring the smooth functioning of your electrical systems through regular maintenance checks.<br>
-                <a href="">CLICK TO BOOK</a>
+                <a href="bookings.html">CLICK TO BOOK</a>
               </p>
             </div>
           </div>
@@ -265,7 +265,7 @@
               </h5>
               <p>
                 Our plumbing maintenance services are designed to keep your home's water systems in top condition.<br>
-                <a href="">CLICK TO BOOK</a>
+                <a href="bookings.html">CLICK TO BOOK</a>
               </p>
             </div>
           </div>
@@ -282,34 +282,35 @@
             </h5>
             <p>
               Taking good care of your daily wears and party wears.<br>
-              <a href="">CLICK TO BOOK</a>
+              <a href="bookings.html">CLICK TO BOOK</a>
             </p>
           </div>
         </div>
-      </div>
+      </div> 
 
-      <!-- <div class="col-sm-6 col-md-4 mx-auto" id="pl">
+       <div class="col-sm-6 col-md-4 mx-auto" id="pl"> 
         <div class="box ">
           <div class="img-box">
-            <img src="images/s3.png" alt="" />
+            <img src="{% static 'images/pest.png' %}" alt="" />
           </div>
           <div class="detail-box">
             <h5>
-              Plumbing
+              Pest control
             </h5>
             <p>
-              Our plumbing maintenance services are designed to keep your home's water systems in top condition.
+              Say bye to pests. We are here to help you.<br>
+              <a href="bookings.html">CLICK TO BOOK</a>
             </p>
           </div>
         </div>
       </div>
     </div>
-      <div class="btn-box">
+      <!-- <div class="btn-box">
         <a href="pl">
           View More
         </a>
       </div>
-    </div> -->
+    </div>  -->
   </section>
 
   <!-- end service section -->
@@ -576,11 +577,11 @@
   {% block extrafooter %}
   <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
   <script src="{% static 'js/bootstrap.js' %}"></script>
-  <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js' %}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js>
   </script>
   <script src="{% static 'js/custom.js' %}"></script>
   <!-- Google Map -->
-  <script src="{% static 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
   <!-- End Google Map -->
    {% endblock extrafooter %}
 
