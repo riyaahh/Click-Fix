@@ -16,6 +16,7 @@
   <link href="{% static 'css/style.css' %}" rel="stylesheet" />
   <!-- responsive style -->
   <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+  <link href="{% static 'js/custom.js' %}" rel="stylesheet" />
   <link rel="stylesheet" href="{% static 'owlcarousel/owl.carousel.min.css' %}">
 <link rel="stylesheet" href="{% static 'owlcarousel/owl.theme.default.min.css' %}">
 
@@ -68,6 +69,10 @@
                 <li class="nav-item">
                   <a class="nav-link" href="contact">Contact Us</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact">Login</a>
+                </li>
+                
               </ul>
             </div>
           </nav>
@@ -545,11 +550,11 @@
   {% block extrafooter %}
   <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
   <script src="{% static 'js/bootstrap.js' %}"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js>
+  <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js' %}">
   </script>
   <script src="{% static 'js/custom.js' %}"></script>
   <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+   <script src="{% static 'https://maps.app.goo.gl/mmSZJ5sT8rZf9xzz5' %}"></script> 
   <!-- End Google Map -->
 
    {% endblock extrafooter %}
