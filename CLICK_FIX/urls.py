@@ -22,9 +22,9 @@ from CLICK_FIX import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('customer.urls')),
+    path('',include('clickadmin.urls')),
+    path('customer', include('customer.urls')),
     path('provider/',include('provider.urls')),
-    path('clickadmin/',include('clickadmin.urls')),
-
+   
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
