@@ -24,7 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('customer.urls')),
     path('provider/',include('provider.urls')),
-    path('cadmin/',include('clickadmin.urls')),
+    path('clickadmin/',include('clickadmin.urls')),
 
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
