@@ -1,10 +1,19 @@
-{% extends "base.html" %} 
-{% load static %}
-{% block content %}
+<!DOCTYPE html>
+<html>
 
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
 
+  <title>Inance</title>
 
-  
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   <!-- bootstrap core css -->
@@ -17,9 +26,9 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+</head>
 
-
-
+<body>
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
@@ -46,7 +55,7 @@
           <nav class="navbar navbar-expand-lg custom_nav-container ">
             <a class="navbar-brand" href="index.html">
               <span>
-                CLICK-FIX
+                Inance
               </span>
             </a>
 
@@ -57,16 +66,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ">
                 <li class="nav-item ">
-                  <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about"> About</a>
+                  <a class="nav-link" href="about.html"> About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="service.html">Services</a>
                 </li>
                 <li class="nav-item active">
-                  <a class="nav-link" href="service">Services</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact">Contact Us</a>
+                  <a class="nav-link" href="contact.html">Contact Us</a>
                 </li>
               </ul>
             </div>
@@ -77,100 +86,51 @@
     <!-- end header section -->
   </div>
 
-  <!-- service section -->
 
-  <section class="service_section layout_padding">
-    <div class="container ">
-      <div class="heading_container heading_center">
-        <h2> Our Services </h2>
+  <!-- contact section -->
+
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Contact Us
+        </h2>
       </div>
       <div class="row">
-        <div class="col-sm-6 col-md-4 mx-auto">
-          <div class="box ">
-            <div class="img-box">
-              <img src="{% static 'images/s1.png' %}" alt="" />
+        <div class="col-md-6">
+          <form action="">
+            <div>
+              <input type="text" placeholder="Name" />
             </div>
-            <div class="detail-box">
-              <h5>
-                Maintenance
-              </h5>
-              <p>
-                Our comprehensive maintenance services ensure your home stays in optimal condition year-round.
-              </p>
+            <div>
+              <input type="text" placeholder="Phone Number" />
             </div>
-          </div>
+            <div>
+              <input type="email" placeholder="Email" />
+            </div>
+            <div>
+              <input type="text" class="message-box" placeholder="Message" />
+            </div>
+            <div class="d-flex ">
+              <button>
+                SEND
+              </button>
+            </div>
+          </form>
         </div>
-        <div class="col-sm-6 col-md-4 mx-auto">
-          <div class="box ">
-            <div class="img-box">
-              <img src="{% static 'images/s2.png' %}" alt="" />
+        <div class="col-md-6">
+          <div class="map_container">
+            <div class="map">
+              <div id="googleMap" style="width:100%;height:100%;"></div>
             </div>
-            <div class="detail-box">
-              <h5>
-                Electrical
-              </h5>
-              <p>
-                Ensuring the smooth functioning of your electrical systems through regular maintenance checks.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 mx-auto">
-          <div class="box ">
-            <div class="img-box">
-              <img src="{% static 'images/s3.png' %}" alt="" />
-            </div>
-            <div class="detail-box">
-              <h5>
-                Plumbing
-              </h5>
-              <p>
-                Our plumbing maintenance services are designed to keep your home's water systems in top condition.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4 mx-auto">
-        <div class="box ">
-          <div class="img-box">
-            <img src="{% static 'images/laundry.jpg' %}" alt="" />
-          </div>
-          <div class="detail-box">
-            <h5>
-              Laundry
-            </h5>
-            <p>
-              Taking good care of your daily wears and party wears.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- <div class="col-sm-6 col-md-4 mx-auto" id="pl">
-        <div class="box ">
-          <div class="img-box">
-            <img src="images/s3.png" alt="" />
-          </div>
-          <div class="detail-box">
-            <h5>
-              Plumbing
-            </h5>
-            <p>
-              Our plumbing maintenance services are designed to keep your home's water systems in top condition.
-            </p>
           </div>
         </div>
       </div>
     </div>
-      <div class="btn-box">
-        <a href="pl">
-          View More
-        </a>
-      </div>
-    </div> -->
   </section>
-  <!-- end service section -->
+
+  <!-- end contact section -->
+
 
   <!-- info section -->
   <section class="info_section ">
@@ -259,15 +219,16 @@
   </footer>
   <!-- footer section -->
 
-  {% endblock content %}
-
-  {% block extrafooter %}
-  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
-  <script src="{% static 'js/bootstrap.js' %}"></script>
-  <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js' %}">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
-  <script src="{% static 'js/custom.js' %}"></script>
+  <script src="js/custom.js"></script>
   <!-- Google Map -->
-  <script src="{% static 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
   <!-- End Google Map -->
-   {% endblock extrafooter %}
+
+
+</body>
+
+</html>

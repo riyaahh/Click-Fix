@@ -6,18 +6,18 @@
 
 
   <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css' %}" />
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
   <!-- font awesome style -->
-  <link rel="stylesheet" type="text/css" href="static/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}" />
 
   <!-- Custom styles for this template -->
-  <link href="static/css/style.css" rel="stylesheet" />
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="static/css/responsive.css" rel="stylesheet" />
-
-
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'owlcarousel/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="{% static 'owlcarousel/owl.theme.default.min.css' %}">
 
 
   <div class="hero_area">
@@ -29,7 +29,7 @@
             <a href="">
               <i class="fa fa-phone" aria-hidden="true"></i>
               <span>
-                Call : +91 8590791082
+                Call : 91+8590791082
               </span>
             </a>
             <a href="">
@@ -82,15 +82,16 @@
           <div class="col-md-6 ">
             <div class="detail-box">
               <h1>
-                Keep Your HOME a HAPPY HOME
-                <h3> Repair and Maintenance</h3>
+                MAKE YOUR HOME <br>
+                HAPPY AND <br>
+                HEALTHY
               </h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui harum voluptatem adipisci. Quos molestiae saepe dicta nobis pariatur, tempora iusto, ad possimus soluta hic praesentium mollitia consequatur beatae, aspernatur culpa.
+                Happy and a healthy home is a dream come true ......................................
               </p>
-              <!-- <a href="">
+              <a href="contact.html">
                 Contact Us
-              </a> -->
+              </a>
             </div>
           </div>
           <div class="col-md-6">
@@ -156,7 +157,7 @@
 
   <!-- about section -->
 
-  <!-- <section class="about_section layout_padding-bottom">
+  <section class="about_section layout_padding-bottom">
     <div class="container">
       <div class="row">
         <div class="col-lg-5 col-md-6">
@@ -174,24 +175,24 @@
         </div>
         <div class="col-lg-7 col-md-6">
           <div class="img-box">
-            <img src="images/about-img.jpg" alt="">
+            <img src="{% static 'images/about-img.jpg' %}" alt="">
           </div>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- end about section -->
 
 
   <!-- professional section -->
 
-  <!-- <section class="professional_section layout_padding">
+  <section class="professional_section layout_padding">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
           <div class="img-box">
-            <img src="images/professional-img.png" alt="">
+            <img src="{% static 'images/professional-img.png' %}" alt="">
           </div>
         </div>
         <div class="col-md-6 ">
@@ -210,7 +211,7 @@
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- end professional section -->
 
@@ -232,8 +233,8 @@
                 Maintenance
               </h5>
               <p>
-                Our comprehensive maintenance services ensure your home stays in optimal condition year-round.<br>
-                <a href="">CLICK TO BOOK</a>
+                when looking at its layout. The point of using Lorem Ipsum is
+                that it has a more-or-less normal
               </p>
             </div>
           </div>
@@ -248,8 +249,8 @@
                 Electrical
               </h5>
               <p>
-                Ensuring the smooth functioning of your electrical systems through regular maintenance checks.<br>
-                <a href="">CLICK TO BOOK</a>
+                when looking at its layout. The point of using Lorem Ipsum is
+                that it has a more-or-less normal
               </p>
             </div>
           </div>
@@ -264,52 +265,19 @@
                 Plumbing
               </h5>
               <p>
-                Our plumbing maintenance services are designed to keep your home's water systems in top condition.<br>
-                <a href="">CLICK TO BOOK</a>
+                when looking at its layout. The point of using Lorem Ipsum is
+                that it has a more-or-less normal
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-sm-6 col-md-4 mx-auto">
-        <div class="box ">
-          <div class="img-box">
-            <img src="{% static 'images/laundry.jpg' %}" alt="" />
-          </div>
-          <div class="detail-box">
-            <h5>
-              Laundry
-            </h5>
-            <p>
-              Taking good care of your daily wears and party wears.<br>
-              <a href="">CLICK TO BOOK</a>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- <div class="col-sm-6 col-md-4 mx-auto" id="pl">
-        <div class="box ">
-          <div class="img-box">
-            <img src="images/s3.png" alt="" />
-          </div>
-          <div class="detail-box">
-            <h5>
-              Plumbing
-            </h5>
-            <p>
-              Our plumbing maintenance services are designed to keep your home's water systems in top condition.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
       <div class="btn-box">
-        <a href="pl">
+        <a href="">
           View More
         </a>
       </div>
-    </div> -->
+    </div>
   </section>
 
   <!-- end service section -->
@@ -329,7 +297,7 @@
             <div class="box">
               <div class="client_id">
                 <div class="img-box">
-                  <img src="{% static 'images/client-1.jpg' %}" alt=""/>
+                  <img src="{% static 'images/client-1.jpg' %}" alt="">
                 </div>
                 <div class="client_detail">
                   <div class="client_info">
@@ -526,7 +494,7 @@
                       <i class="fa fa-envelope" aria-hidden="true"></i>
                     </div>
                     <p>
-                      riyapc33@gmail.com
+                      demo@gmail.com
                     </p>
                   </div>
                 </a>
@@ -571,18 +539,17 @@
     </div>
   </footer>
   <!-- footer section -->
+
   {% endblock content %}
 
   {% block extrafooter %}
   <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
   <script src="{% static 'js/bootstrap.js' %}"></script>
-  <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js' %}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js>
   </script>
   <script src="{% static 'js/custom.js' %}"></script>
   <!-- Google Map -->
-  <script src="{% static 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
   <!-- End Google Map -->
+
    {% endblock extrafooter %}
-
-
-  
