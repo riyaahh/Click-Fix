@@ -9,13 +9,14 @@ def register(request):
     return render(request, 'customer\\register.html')
 
 def login(request): 
-    if request.method== 'POST':
-        username=request.POST('email')
-        password=request.POST('password')
-        user= authenticate()
+    return render(request, 'customer\\login.html')
+    # if request.method== 'POST':
+    #     username=request.POST('email')
+    #     password=request.POST('password')
+    #     user= authenticate()
         
 
-    return render(request, 'customer\\login.html')
+ 
 
 
 
