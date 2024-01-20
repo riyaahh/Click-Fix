@@ -1,16 +1,7 @@
-{% extends "base1.html" %} 
+{% extends "base.html" %}
 {% load static %}
 
-{% block styles %}
-    <link rel="stylesheet" href="{% static 'css/login.css' %}"/>
-    <link rel="stylesheet" href="{% static 'js/login.js' %}"/>
-{% endblock styles %}
-
 {% block content %}
-    <section class="container">
-        <div class="login-container">
-            <div class="circle circle-one"></div>
-            <div class="form-container">
 
 
                 <img src="{% static 'images/illustration.png' %}" alt="illustration" class="illustration" />
@@ -31,12 +22,27 @@
                     <a href="{% url 'register' %}">REGISTER</a>
                     <a href="">FORGOT PASSWORD</a>
                 </div>
+
+<div class="container">
+    <div class="row d-flex justify-content-center align-items-center mt-5 mb-5">
+        <form class="col-6">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+
             </div>
-            <div class="circle circle-two"></div>
-        </div>
-        <div class="theme-btn-container"></div>
-    </section>
-    {% endblock content %}
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</div>
 
-
-
+{% endblock content %}
