@@ -1,103 +1,35 @@
-:root {
-    --background: #1a1a2e;
-    --color: #ffffff;
-    --primary-color: #0f3460;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif; /* Use the correct font family name */
-    background: var(--background);
-    color: var(--color);
-    letter-spacing: 1px;
-    transition: background 0.2s ease;
+    background-color: #f8f9fa;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.login-container {
-    position: relative;
-    width: 40rem; /* Increase the width of the container */
-}
-
-.form-container {
-    border: 1px solid hsla(0, 0%, 65%, 0.158);
-    box-shadow: 0 0 36px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    backdrop-filter: blur(20px);
-    z-index: 99;
-    padding: 2rem;
-}
-
-.login-container form input {
-    display: block;
-    padding: 14.5px;
-    width: 100%;
-    margin: 1rem 0; /* Adjust the margin */
-    color: var(--color);
-    outline: none;
-    background-color: #9191911f;
-    border: none;
-    border-radius: 8px; /* Increase border-radius for a softer look */
-    font-weight: 500;
-    letter-spacing: 0.8px;
-    font-size: 16px; /* Adjust font size */
-    backdrop-filter: blur(15px);
-}
-
-.login-container form input:focus {
-    box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
-    animation: wobble 0.3s ease-in;
-}
-
-.login-container form button {
-    background-color: var(--primary-color);
-    color: var(--color);
-    display: block;
-    padding: 13px;
+.login-form {
+    background-color: #ffffff;
     border-radius: 8px;
-    outline: none;
-    font-size: 18px;
-    letter-spacing: 1.5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
     font-weight: bold;
+    color: #343a40;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-block {
     width: 100%;
-    cursor: pointer;
-    margin-top: 1rem; /* Adjust margin */
-    transition: all 0.2s ease-in-out;
 }
 
-.login-container form button:hover {
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
-    transform: scale(1.02);
-}
-
-.circle {
-    width: 10rem; /* Adjust the size of the circle */
-    height: 10rem;
-    background: var(--primary-color);
-    border-radius: 50%;
-    position: absolute;
-}
-
-.illustration {
-    position: absolute;
-    top: -14%;
-    right: -2px;
-    width: 90%;
-}
-
-/* Add your own styles for wide page layout */
+/* Optional: Add your custom styles here */
