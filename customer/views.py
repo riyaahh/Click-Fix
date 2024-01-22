@@ -8,6 +8,9 @@ def index(request):
 def register(request):
     return render(request, 'customer\\register.html')
 
+def user(request):
+    return render(request,'customer\\user.html')
+
 def login(request): 
     return render(request, 'customer\\login.html')
     # if request.method== 'POST':
