@@ -1,7 +1,9 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
+
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User
+
 
 
 def login(request):
@@ -31,6 +33,23 @@ def register(request):
         username = request.POST['username'].strip()
         password = request.POST['password'].strip()
         phonenumber=request.POST['phonenumber'].strip()
+
+    
+    context={}
+
+    return render(request, 'customer\\register.html',context)
+
+def user(request):
+    return render(request,'customer\\user.html')
+
+def login(request): 
+    context={}
+    return render(request, 'customer\\login.html',context)
+    # if request.method== 'POST':
+    #     username=request.POST('email')
+    #     password=request.POST('password')
+    #     user= authenticate()
+
         
 
     # ## Validation for first name
@@ -54,7 +73,7 @@ def register(request):
             errors['email'] = 'Email field is required.'
         else:
             is_used = User.objects.filter(email='email').exists()
-            if is_used:
+        if is_used:
                 errors['email'] = 'This email is already taken.'
 
     # ## Validation for department
