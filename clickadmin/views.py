@@ -16,5 +16,12 @@ def service(request):
     return render(request,"clickadmin/service.html",context={})
 def login(request):
     return render(request,"customer/login.html",context={})
+# def register(request):
+#     return render(request,"customer\\register.html",context={})
+
+# def user(request):
+#     return render(request,'customer\\user.html')
+
+
 # Create your views here.
 
