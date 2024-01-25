@@ -45,74 +45,46 @@ def user(request):
 def login(request): 
     context={}
     return render(request, 'customer\\login.html',context)
-    # if request.method== 'POST':
-    #     username=request.POST('email')
-    #     password=request.POST('password')
-    #     user= authenticate()
-
+   
         
 
-    # ## Validation for first name
-    #     if not first_name:
-    #         errors['first_name'] = 'First name is required.'
-
-    # ## Validation for last name
-    #     if not last_name:
-    #         errors['last_name'] = 'Last name is required.'
-
-    ## Validation for Register number
-        # if not register_number:
-        #     errors['register_number'] = 'Register number is required.'
-        # else:
-        #     is_used = User.objects.filter(username='register_number').exists()
-        #     if is_used:
-        #         errors['register_number'] = 'Register number already exits.'
-
-    ## Validation for email
-        if not email:
+   
+    if not email:
             errors['email'] = 'Email field is required.'
-        else:
+    else:
             is_used = User.objects.filter(email='email').exists()
-        if is_used:
+    if is_used:
                 errors['email'] = 'This email is already taken.'
 
-    # ## Validation for department
-    #     if not department:
-    #         errors['department'] = 'Deaprtment is required.'
-
-    ## Validation for username
-        if not username:
-            errors['username'] = 'Username field is required.'
-        else:
+   
+                errors['username'] = 'Username field is required.'
+    else:
             is_used = User.objects.filter(username='username').exists()
-            if is_used:
+    if is_used:
                 errors['username'] = 'This username is already taken.'
 
-    ## Validation for password
-        if not password:
+ 
+    if not password:
             errors['password'] = 'Password is required.'
        
 
-        is_valid = len(errors.keys()) == 0
+            is_valid = len(errors.keys()) == 0
 
-        if is_valid:
+    if is_valid:
 
-            ## Creating an user
-
-            user = User.objects.create_user(
-                # first_name = first_name,
-                # last_name = last_name,
+          user = User.objects.create_user(
+                
                 username = username,
                 email = email,
                 password = password,
             )
             
-            user.save()
-            return redirect("/home")
+    user.save()
+    return redirect("/home")
     
     context = {
         'errors' : errors
-    }
+            }
 
     return render (request, "register.html", context)
 

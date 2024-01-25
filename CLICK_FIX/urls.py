@@ -22,8 +22,8 @@ from CLICK_FIX import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('customer.urls')),
-    path('click-admin/',include('clickadmin.urls')),
+    path('customer/', include('customer.urls')),
+    path('',include('clickadmin.urls')),
     path('provider/',include('provider.urls')),
    
 ]
