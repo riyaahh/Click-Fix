@@ -11,7 +11,7 @@ from django.http import HttpResponse
 # def service(request):
 #     return render(request,"provider/service.html",context={})
 # # Create your views here.
-def book(request):
+def bookings(request):
     return render(request,"provider/bookings.html",context={})
-def books(request):
+def bookform(request):
     return render(request,"provider/bookform.html",context={})
