@@ -9,5 +9,7 @@ class User(models.Model):
     gender = models.CharField(max_length=10, choices=[('Male', 'Male'), ('Female', 'Female'), ('Other', 'Other')])
 
     def __str__(self):
-        return self.username
+        return str(self.username.__str__())
+
+
 
