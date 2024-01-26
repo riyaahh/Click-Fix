@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<form action="">
+    <table style="padding-left: 5%;">
+        <tr>
+            <td><label for="name">NAME:</label>
+            <td><input type="text" name="name" id="name" placeholder="enter the name"></td>
+        </tr>
+        <tr>
+            <td><label for="roll no"> EMAIL</label>
+            <td><input type="number" roll no="roll" id="rollno" placeholder="enter YOUR EXPERIENCE"></td>
+        </tr><br>
+        <tr>
+            <td><label for="service">SERVICE TYPE:</label>
+            <td><input type="text" class="class" id="type" placeholder="enter the TYPE"></td>
+        </tr>
+        
+        
+        <tr>
+            <td><label for="phone"> PHONE</label>
+            <td><input type="number" roll no="roll" id="roll" placeholder="enter YOUR EXPERIENCE"></td>
+        </tr><br>
+        <tr>
+            <td><label for="experience">EXPERIENCE</label></td>
+            <td><textarea id="experience" name="experience" id="exp">ENTER YOUR TEXT</textarea>
+            </td>
+            </tr>
+            <tr>
+                <td><label for="experience">EDUCATION</label></td>
+                <td><textarea id="experience" name="experience" id="edu">ENTER YOUR TEXT</textarea>
+                </td>
+                </tr>
+            <TR>
+            <TD><label for="date"><p style="color: black;">DOB</p></label></TD>
+            <TD><input type="date" id="date" name="date" id="dob" class="form-control"><br><br></TD>
+           
+            
+        
+    </table>
+    <div class="mb-3">
+        <label for="formFile" class="form-label">Choose a profile picture for you</label>
+        <input class="form-control" type="file" id="formFile">
+      </div>
+      <button type="submit"><a href="prof">Submit</a></button>
+       
+</form>
+{% endblock content %}

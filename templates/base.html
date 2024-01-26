@@ -17,7 +17,7 @@
     </head>
     <body>
         <div class="hero_area">
-            <!-- header section strats -->
+            
             <header class="header_section">
               <div class="header_top">
                 <div class="container-fluid">
@@ -60,17 +60,7 @@
 
                           <a class="nav-link" href="clickadmin/index.html'">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <!-- <li class="nav-item">
-                          <a class="nav-link" href="clickadmin/about.html"> About</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="clickadmin/service.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="clickadmin/contact.html">Contact Us</a>
-
-                          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                        </li> -->
+                       
                         <li class="nav-item">
                           <a class="nav-link" href="{% url 'about' %}"> About</a>
                         </li>
@@ -119,9 +109,10 @@
          {% endblock content %}
 
          {% block extrafooter %}
+         {% endblock extrafooter %}
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-         {% endblock extrafooter %}
+        
     </body>
     
 </html>
