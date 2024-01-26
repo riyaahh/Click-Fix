@@ -5,7 +5,15 @@ from django.contrib.auth import authenticate,login
 from django.contrib.auth.models import User
 from .models import userDetails
 
+
+def user(request):
+    return render(request,"customer/user.html",context={})
+
+
+# def login(request):
+
 def signin(request):
+
     if request.method == "POST":
         email=request.POST.get('email')
         pasword=request.POST.get('password')
@@ -29,7 +37,7 @@ def signin(request):
             msg='invalid details'
             return render(request,'customer\login.html',{'msg':msg})
     else:
-        return render(request,'customer\login.html')
+            return render(request,'customer\login.html')
         
 
 

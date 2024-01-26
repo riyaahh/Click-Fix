@@ -7,9 +7,9 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return render(request,"clickadmin/index.html",context={})
+    return render(request,"clickadmin/index.html")
 def about(request):
-    return render(request,"clickadmin/about.html",context={})
+    return render(request,"clickadmin/about.html")
 def contact(request):
     return render(request,"clickadmin/contact.html",context={})
 def service(request):

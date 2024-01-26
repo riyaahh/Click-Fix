@@ -34,7 +34,11 @@
               <div class="header_bottom">
                 <div class="container-fluid">
                   <nav class="navbar navbar-expand-lg custom_nav-container ">
+
+                    <a class="navbar-brand" href="index">
+
                     <a class="navbar-brand" href="/">
+
                       <span>
                         CLICK-FIX
                       </span>
@@ -47,8 +51,20 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                       <ul class="navbar-nav ">
                         <li class="nav-item active">
-                          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+
+                          <a class="nav-link" href="clickadmin/index.html'">Home <span class="sr-only">(current)</span></a>
                         </li>
+                        <!-- <li class="nav-item">
+                          <a class="nav-link" href="clickadmin/about.html"> About</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="clickadmin/service.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="clickadmin/contact.html">Contact Us</a>
+
+                          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                        </li> -->
                         <li class="nav-item">
                           <a class="nav-link" href="{% url 'about' %}"> About</a>
                         </li>
@@ -57,16 +73,29 @@
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+
                         </li>
                         {% if  not request.user.is_authenticated %}
 
                         <li class="nav-item">
+
+
+                          <a class="nav-link" href="clickadmin/login.html ">Login</a>
+
+                          <a class="nav-link" href="/">Logout</a>
+
+
                           <a class="nav-link" href="# ">Logout</a>
+
                         </li>
                         
                         {% else %}
                         <li class="nav-item">
+
+                          <a class="nav-link" href="clickadmin/index.html">Logout</a>
+
                           <a class="nav-link" href="{% url 'login' %}">Login</a>
+
                         </li>
                         {% endif %}
                         
@@ -84,9 +113,15 @@
          {% endblock content %}
 
          {% block extrafooter %}
+<<<<<<< HEAD
          {% endblock extrafooter %}
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
       
+=======
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+         {% endblock extrafooter %}
+>>>>>>> 05f1f95a859358c8c682eac6e8473dd8146e420c
     </body>
     
 </html>
