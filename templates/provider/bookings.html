@@ -1,14 +1,15 @@
-{% load static %}
 {% extends "base.html" %}
+{% load static %}
 
 
 
-{% block content %}
-<link href="css/style.css" rel="stylesheet">
+{% block styles %}
+
+<link href="{% 'css/style.css' %}" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-
+{% endblock styles %}
+  {% block content %}
 <div class="card-group">
   <div class="card" style="margin-right:10px; color: rgb(30, 11, 104); background-color: rgb(226, 186, 56);">
     <img src="{% static 'images/maintainance.avif' %}" class="card-img-top" alt="card-group-image" style="height: 5cm;">
@@ -37,7 +38,7 @@
     </div>
   </div>
   <div class="card" style="margin-right:10px; color: rgb(30, 11, 104); background-color: rgb(226, 186, 56);">
-    <img src="plum.jpg" class="card-img-top" alt="card-group-image" style="height: 5cm" ;>
+    <img src="{% 'plum.jpg' %}" class="card-img-top" alt="card-group-image" style="height: 5cm" ;>
     <div class="card-body">
       <h5 class="card-title">PLUMBING</h5>
       <p class="card-text">"Introducing CLICK-FIX, your go-to plumbing app for seamless home services. Our experienced
@@ -51,7 +52,7 @@
   </div>
 
   <div class="card" style="margin-right:10px; color: rgb(30, 11, 104); background-color: rgb(226, 186, 56);">
-    <img src="elect - Copy.webp" class="card-img-top" alt="card-group-image" style="height: 5cm;">
+    <img src="{% 'elect - Copy.webp' %}" class="card-img-top" alt="card-group-image" style="height: 5cm;">
     <div class="card-body">
       <h5 class="card-title">ELECTRICAL</h5>
       <p class="card-text">"Empower your home with CLICK-FIX Electrical. Our skilled electricians offer a spectrum of
