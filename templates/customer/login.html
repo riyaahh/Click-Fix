@@ -1,6 +1,25 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block styles %}
+
+<link rel="stylesheet" type="text/css"
+  href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css' %}" />
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+<!-- font awesome style -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}" />
+
+<!-- Custom styles for this template -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+<!-- responsive style -->
+<link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+<link href="{% static 'js/custom.js' %}" rel="stylesheet" />
+<link rel="stylesheet" href="{% static 'owlcarousel/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="{% static 'owlcarousel/owl.theme.default.min.css' %}">
+{% endblock styles %}
+
+
 {% block content %}
 
 <div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
@@ -20,17 +39,7 @@
                 <form action="" method="post">
                     {% csrf_token %}
                     <div class="card2 card border-0 px-4 py-5">
-                        <!-- <div class="row mb-4 px-3">
-                      <h6 class="mb-0 mr-4 mt-2">Sign in with</h6>
-                      <div class="facebook text-center mr-3"><div class="fa fa-facebook"></div></div>
-                      <div class="twitter text-center mr-3"><div class="fa fa-twitter"></div></div>
-                      <div class="linkedin text-center mr-3"><div class="fa fa-linkedin"></div></div>
-                  </div> -->
-                        <!-- <div class="row px-3 mb-4">
-                      
-                      <small class="or text-center">Or</small>
-                      <div class="line"></div>
-                  </div> -->
+                       
                   <div class="line">{{msg}}</div>
                         <div class="row px-3">
                             <label class="mb-1">
@@ -45,14 +54,11 @@
                             <input type="password" name="password" placeholder="Enter password">
                         </div>
                         <div class="row px-3 mb-4">
-                            <!-- <div class="custom-control custom-checkbox custom-control-inline">
-                          <input id="chk1" type="checkbox" name="chk" class="custom-control-input"> 
-                          <label for="chk1" class="custom-control-label text-sm">Remember me</label>
-                      </div> -->
+                           
                             <a href="#" class="ml-auto mb-0 text-sm">Forgot Password?</a>
                         </div>
                         <div class="row mb-3 px-3">
-                            <input type="submit" class="btn btn-primary" value="Login">
+                            <input type="submit" class="btn btn-primary" value="Login" href="{ url 'UserData.html' %}">
                         </div>
                         <div class="row mb-4 px-3">
 
@@ -67,17 +73,7 @@
                 </form>
             </div>
         </div>
-        <!-- <div class="bg-blue py-4">
-          <div class="row px-3">
-              <small class="ml-4 ml-sm-5 mb-2">Copyright &copy; 2019. All rights reserved.</small>
-              <div class="social-contact ml-4 ml-sm-auto">
-                  <span class="fa fa-facebook mr-4 text-sm"></span>
-                  <span class="fa fa-google-plus mr-4 text-sm"></span>
-                  <span class="fa fa-linkedin mr-4 text-sm"></span>
-                  <span class="fa fa-twitter mr-4 mr-sm-5 text-sm"></span>
-              </div>
-          </div>
-      </div> -->
+       
     </div>
 </div>
 {% endblock content %}

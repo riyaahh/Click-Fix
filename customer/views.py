@@ -6,8 +6,8 @@ from django.contrib.auth.models import User
 from .models import userDetails
 
 
-def user(request):
-    return render(request,"customer/user.html",context={})
+def UserData(request):
+    return render(request,"customer/UserData.html",context={})
 
 
 # def login(request):
