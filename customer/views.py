@@ -8,6 +8,10 @@ from .models import userDetails
 
 def UserData(request):
     return render(request,"customer/UserData.html",context={})
+def bookings(request):
+    return render(request,"customer/bookings.html",context={})
+def bookform(request):
+    return render(request,"customer/bookform.html",context={})
 
 
 # def login(request):
@@ -24,7 +28,7 @@ def signin(request):
             if user.is_superuser:
                 login(request,user)
                 request.session['admin_id']=user.id
-                return redirect("index")
+                return redirect("user")
             elif user.is_staff:
                 login(request,user)
                 request.session['admin_id']=user.id
@@ -59,57 +63,16 @@ def register(request):
         return render(request, 'customer\Register.html')
 
 
-def userData(request):
-    context={
+def adduser(request):
+    if request.method=="POST":
+        Firstname=request.POST.get('firstName')
+        Lastname=request.POST.get('secondName')
+        phoneno=request.POST.get('phoneNo')
+        Email=request.POST.get('email')
+        Gender=request.POST.get('Gender')
+        
+        newuser=userDetails(firstname=Firstname,lastname=Lastname,phone_number=phoneno,mail=Email,gender=Gender)
+        newuser.save()
+        return redirect('adduser')
+        
 
-    }
-    return render(request, "customer/UserData.html",context)
-
-
-   
-    # if not email:
-    #         errors['email'] = 'Email field is required.'
-    # else:
-    #         is_used = User.objects.filter(email='email').exists()
-    # if is_used:
-    #             errors['email'] = 'This email is already taken.'
-
-   
-    #             errors['username'] = 'Username field is required.'
-    # else:
-    #         is_used = User.objects.filter(username='username').exists()
-    # if is_used:
-    #             errors['username'] = 'This username is already taken.'
-
- 
-    # if not password:
-    #         errors['password'] = 'Password is required.'
-       
-
-    #         is_valid = len(errors.keys()) == 0
-
-    # if is_valid:
-
-    #       user = User.objects.create_user(
-                
-    #             username = username,
-    #             email = email,
-    #             password = password,
-    #         )
-            
-    # user.save()
-    # return redirect("/home")
-    
-    # context = {
-    #     'errors' : errors
-    #         }
-
-    # return render (request, "register.html", context)
-
- 
-
-
-
-   
-
-    

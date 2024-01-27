@@ -65,12 +65,12 @@
                           <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
 
                         </li>
-                        {% if  not request.user.is_authenticated %}
+                        {% if  user.is_authenticated %}
 
                         <li class="nav-item">
 
 
-                          <a class="nav-link" href="clickadmin/login.html ">Login</a>
+                          <a class="nav-link" href="{% url 'login' %} ">Login/</a>
 
                           <a class="nav-link" href="/">Logout</a>
 
@@ -84,7 +84,7 @@
 
                           <a class="nav-link" href="clickadmin/index.html">Logout</a>
 
-                          <a class="nav-link" href="{% url 'login' %}">Login</a>
+                          <!-- <a class="nav-link" href="{% url 'login' %}">Login</a> -->
 
                         </li>
                         {% endif %}

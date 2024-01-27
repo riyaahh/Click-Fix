@@ -12,7 +12,7 @@
 .container{
 	background: #2d3e3f;
 	width: 350px;
-	height: 300px;
+	height: 450px;
 	padding-bottom: 10px;
 	position: absolute;
 	top:50%;
@@ -44,12 +44,17 @@
 
 .box{
 	width: 360px;
-	height: 35px;
+	height: 350x;
 	margin-top: 20px;
 	font-family: verdana;
 	font-size: 12px;
 }
 
+.reg{
+	position:absolute;
+	top: 50%;
+
+}
 .textBox{
 	height: 35px;
 	width: 190px;
@@ -86,7 +91,7 @@
 	float: right;
 	border: none;
 	color: white;
-	width: 10px;
+	width: 5cm;
 	height: 35px;
 	background: #00bbff;
 	text-transform: uppercase;

@@ -12,11 +12,11 @@ from django.http import HttpResponse
 # def service(request):
 #     return render(request,"provider/service.html",context={})
 # # Create your views here.
-def bookings(request):
-    return render(request,"provider/bookings.html",context={})
-def bookform(request):
-    return render(request,"provider/bookform.html",context={})
+
 def prof(request):
     return render(request,"provider/prof.html",context={})
 def profform(request):
     return render(request,"provider/profform.html",context={})
+def history(request):
+    return render (request,"provider/history.html",context={})
+    
