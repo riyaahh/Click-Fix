@@ -1,10 +1,12 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 
-from django.contrib.auth import authenticate,login
 from django.contrib.auth.models import User
 from .models import userDetails
 
+
+def customer_dashboard(request):
+    return render(request,"customer/dashboard.html")
 
 def UserData(request):
     return render(request,"customer/UserData.html",context={})
@@ -14,6 +16,7 @@ def bookform(request):
     return render(request,"customer/bookform.html",context={})
 
 
+<<<<<<< HEAD
 # def login(request):
 
 def signin(request):
@@ -76,3 +79,9 @@ def adduser(request):
         return redirect('adduser')
         
 
+=======
+
+   
+
+    
+>>>>>>> 218afbccaec38d9dec7b7e901d6c327e4fee6062
